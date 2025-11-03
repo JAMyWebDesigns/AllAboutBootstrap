@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Toasts Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="../bootstrap/bootstrap_5_3_8/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <button class="btn btn-primary" id="showToast">Show Toast</button>
+
+        <!-- Toast container -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Notification</strong>
+                    <small>Just now</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                </div>
+                <div class="toast-body">
+                    Hello! This is a Bootstrap toast message.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="../bootstrap/bootstrap_5_3_8/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('showToast').addEventListener('click', function() {
+            const toastElement = document.querySelector('.toast');
+            const toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        });
+    </script>
+</body>
+</html>

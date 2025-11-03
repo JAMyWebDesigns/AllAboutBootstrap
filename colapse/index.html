@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Collapse Examples</title>
+    <link href="../bootstrap/bootstrap_5_3_8/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+
+    <h2 class="mb-3">Bootstrap Collapse — simple examples</h2>
+
+    <!-- Basic collapse with button -->
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Toggle content
+    </button>
+    <div class="collapse mt-3" id="collapseExample">
+        <div class="card card-body">
+            This content is collapsed by default. Use the button above to toggle visibility.
+        </div>
+    </div>
+
+    <!-- Multiple targets (show/hide several collapse elements) -->
+    <div class="mt-4">
+        <a class="btn btn-outline-secondary me-2" data-bs-toggle="collapse" href="#multiCollapse1" role="button" aria-expanded="false" aria-controls="multiCollapse1">Toggle 1</a>
+        <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#multiCollapse2" role="button" aria-expanded="false" aria-controls="multiCollapse2">Toggle 2</a>
+
+        <div class="row mt-3">
+            <div class="col">
+                <div class="collapse" id="multiCollapse1">
+                    <div class="card card-body">First collapsible column content.</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse" id="multiCollapse2">
+                    <div class="card card-body">Second collapsible column content.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion (only one open at a time) -->
+    <div class="accordion mt-5" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Accordion Item #1
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Content for accordion item 1.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Accordion Item #2
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Content for accordion item 2.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Accordion Item #3
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Content for accordion item 3.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../bootstrap/bootstrap_5_3_8/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

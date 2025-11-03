@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Form Full Example</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="../bootstrap/bootstrap_5_3_8/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Small helpers for examples */
+        .topbar {
+            font-size: .9rem;
+        }
+
+        .hero {
+            border-bottom-left-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Topbar (thin info row) -->
+    <div class="bg-dark text-light topbar">
+        <div class="container d-flex justify-content-between align-items-center py-1">
+            <div>
+                <small class="me-3">📞 +1 (555) 123-4567</small>
+                <small class="me-3">✉️ support@example.com</small>
+                <small class="text-muted">Mon–Fri, 9am–5pm</small>
+            </div>
+            <div>
+                <a href="#" class="text-light text-decoration-none me-2">Login</a>
+                <a href="#" class="text-light text-decoration-none">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="https://via.placeholder.com/32" alt="logo" width="32" height="32"
+                    class="d-inline-block align-text-top rounded me-2">
+                MySite
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#">Design</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Consulting</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+
+                <!-- Search + CTA -->
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+
+                <div class="d-flex gap-2">
+                    <a class="btn btn-outline-primary d-none d-lg-inline" href="#">Contact</a>
+                    <a class="btn btn-primary" href="#">Get started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / subheader -->
+    <header class="bg-primary text-white hero">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-6 fw-bold mb-2">Flexible, responsive headers with Bootstrap</h1>
+                    <p class="mb-0">Examples include a thin topbar, a responsive navbar with dropdowns, search, and CTA
+                        buttons.</p>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <a class="btn btn-outline-light me-2" href="#">Documentation</a>
+                    <a class="btn btn-light text-primary" href="#">Start a Project</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page content placeholder -->
+    <main class="container my-5">
+        <div class="container mt-5">
+            <h2>Example Form</h2>
+            <form class="bg-white p-4 shadow-sm rounded">
+                <div class="accordion mt-5" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Personal Data
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <!-- text -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="textInput">Text</label>
+                                    <input id="textInput" name="textInput" type="text" class="form-control"
+                                        placeholder="Type text" required>
+                                </div>
+
+                                <!-- search -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="searchInput">Search</label>
+                                    <input id="searchInput" name="searchInput" type="search" class="form-control"
+                                        placeholder="Search...">
+                                </div>
+
+                                <!-- email -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="emailInput">Email</label>
+                                    <input id="emailInput" name="emailInput" type="email" class="form-control"
+                                        placeholder="name@example.com">
+                                </div>
+
+                                <!-- url -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="urlInput">URL</label>
+                                    <input id="urlInput" name="urlInput" type="url" class="form-control"
+                                        placeholder="https://...">
+                                </div>
+
+                                <!-- tel -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="telInput">Telephone</label>
+                                    <input id="telInput" name="telInput" type="tel" class="form-control"
+                                        placeholder="+1 (555) 555-5555">
+                                </div>
+
+                                <!-- password -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="passwordInput">Password</label>
+                                    <input id="passwordInput" name="passwordInput" type="password" class="form-control"
+                                        placeholder="••••••••" required>
+                                </div>
+
+                                <!-- number -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="numberInput">Number</label>
+                                    <input id="numberInput" name="numberInput" type="number" class="form-control"
+                                        min="0" max="100" step="1" value="10">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                Preference Data
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                                <!-- range -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="rangeInput">Range</label>
+                                    <input id="rangeInput" name="rangeInput" type="range" class="form-range" min="0"
+                                        max="100" value="50">
+                                </div>
+
+                                <!-- date -->
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label" for="dateInput">Date</label>
+                                        <input id="dateInput" name="dateInput" type="date" class="form-control">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label" for="timeInput">Time</label>
+                                        <input id="timeInput" name="timeInput" type="time" class="form-control">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label" for="datetimeInput">Datetime-local</label>
+                                        <input id="datetimeInput" name="datetimeInput" type="datetime-local"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <!-- month & week -->
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="monthInput">Month</label>
+                                        <input id="monthInput" name="monthInput" type="month" class="form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="weekInput">Week</label>
+                                        <input id="weekInput" name="weekInput" type="week" class="form-control">
+                                    </div>
+                                </div>
+
+                                <!-- color -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="colorInput">Color</label>
+                                    <input id="colorInput" name="colorInput" type="color"
+                                        class="form-control form-control-color" value="#0d6efd"
+                                        title="Choose your color">
+                                </div>
+
+                                <!-- file -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="fileInput">File</label>
+                                    <input id="fileInput" name="fileInput" type="file" class="form-control">
+                                    <div class="form-text">Single file upload example</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                Selection Data
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+
+                                <!-- textarea -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="textarea">Textarea</label>
+                                    <textarea id="textarea" name="textarea" class="form-control" rows="3"
+                                        placeholder="Multi-line text"></textarea>
+                                </div>
+
+                                <!-- select -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="select">Select</label>
+                                    <select id="select" name="select" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                    </select>
+                                </div>
+
+                                <!-- checkboxes -->
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Checkboxes</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                                        <label class="form-check-label" for="check1">Default checkbox</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check2" checked>
+                                        <label class="form-check-label" for="check2">Checked checkbox</label>
+                                    </div>
+                                </div>
+
+                                <!-- radios -->
+                                <div class="mb-3">
+                                    <label class="form-label d-block">Radio buttons</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioGroup" id="radio1"
+                                            checked>
+                                        <label class="form-check-label" for="radio1">Option A</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioGroup" id="radio2">
+                                        <label class="form-check-label" for="radio2">Option B</label>
+                                    </div>
+                                </div>
+
+                                <!-- input types used as buttons -->
+                                <div class="mb-3 d-flex gap-2 flex-wrap">
+                                    <input type="button" class="btn btn-outline-primary" value="Input button">
+                                    <input type="submit" class="btn btn-primary" value="Submit">
+                                    <input type="reset" class="btn btn-secondary" value="Reset">
+                                    <!-- input type=image -->
+                                    <input type="image" src="https://via.placeholder.com/28" alt="image button"
+                                        class="btn p-0" style="height:34px;object-fit:contain">
+                                </div>
+
+                                <!-- hidden field -->
+                                <input type="hidden" name="hiddenField" value="hiddenValue">
+
+                                <!-- disabled / readonly examples -->
+                                <div class="row g-3 mt-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="disabledInput">Disabled input</label>
+                                        <input id="disabledInput" class="form-control" type="text"
+                                            placeholder="Disabled" disabled>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="readonlyInput">Readonly input</label>
+                                        <input id="readonlyInput" class="form-control" type="text" value="Read-only"
+                                            readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit button triggering modal -->
+                    <br />
+                    <div class="col-md-6">
+                        <button type="button" id="btnSendData" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#basicModal" disabled>Submit</button>
+                    </div>
+
+                    <!-- Basic Modal -->
+                    <div class="modal fade" id="basicModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Confirm</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure to send the data?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary" id="liveToastBtn">Save
+                                        changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Toast container -->
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="..." class="rounded me-2" alt="...">
+                                <strong class="me-auto">Bootstrap</strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Hello, world! This is a toast message.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-body-tertiary text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2020 Copyright:
+            <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Bootstrap JS (bundle includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="../bootstrap/bootstrap_5_3_8/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+
+        if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            toastTrigger.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        }
+    </script>
+    <script>
+        const fieldText = document.getElementById('textInput');
+        const fieldPass = document.getElementById('passwordInput');
+        const botonSend = document.getElementById('btnSendData');
+
+        fieldText.addEventListener('input', function () {
+            if (fieldText.value.trim() === '' || fieldPass.value.trim() === '') {
+                botonSend.disabled = true;
+            } else {
+                botonSend.disabled = false;
+            }
+        });
+
+        fieldPass.addEventListener('input', function () {
+            if (fieldPass.value.trim() === '' || fieldText.value.trim() === '') {
+                botonSend.disabled = true;
+            } else {
+                botonSend.disabled = false;
+            }
+        });
+    </script>
+</body>
+
+</html>

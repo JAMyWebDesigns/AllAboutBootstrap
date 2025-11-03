@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Header Examples</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="../bootstrap/bootstrap_5_3_8/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Small helpers for examples */
+        .topbar { font-size: .9rem; }
+        .hero { border-bottom-left-radius: .5rem; border-bottom-right-radius: .5rem; }
+    </style>
+</head>
+<body>
+
+    <!-- Topbar (thin info row) -->
+    <div class="bg-dark text-light topbar">
+        <div class="container d-flex justify-content-between align-items-center py-1">
+            <div>
+                <small class="me-3">📞 +1 (555) 123-4567</small>
+                <small class="me-3">✉️ support@example.com</small>
+                <small class="text-muted">Mon–Fri, 9am–5pm</small>
+            </div>
+            <div>
+                <a href="#" class="text-light text-decoration-none me-2">Login</a>
+                <a href="#" class="text-light text-decoration-none">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="https://via.placeholder.com/32" alt="logo" width="32" height="32" class="d-inline-block align-text-top rounded me-2">
+                MySite
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#">Design</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Consulting</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+
+                <!-- Search + CTA -->
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+
+                <div class="d-flex gap-2">
+                    <a class="btn btn-outline-primary d-none d-lg-inline" href="#">Contact</a>
+                    <a class="btn btn-primary" href="#">Get started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / subheader -->
+    <header class="bg-primary text-white hero">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-6 fw-bold mb-2">Flexible, responsive headers with Bootstrap</h1>
+                    <p class="mb-0">Examples include a thin topbar, a responsive navbar with dropdowns, search, and CTA buttons.</p>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <a class="btn btn-outline-light me-2" href="#">Documentation</a>
+                    <a class="btn btn-light text-primary" href="#">Start a Project</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page content placeholder -->
+    <main class="container my-5">
+        <h2>Page content</h2>
+        <p class="text-muted">Use this area to continue building your page below the header.</p>
+    </main>
+
+    <!-- Bootstrap JS (bundle includes Popper) -->
+    <script src="../bootstrap/bootstrap_5_3_8/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
